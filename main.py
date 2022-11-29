@@ -22,10 +22,7 @@ async def root():
 
 @app.post("/generate_len/")
 def generate_len(source: SourceTextLen):
-    """Генерация текста заданной длины"""
-    """
-    Create an item with all the information:
-
+    """Text generation using user input
     - **text**: input user text
     - **text_len**: count of output symbols
     """
