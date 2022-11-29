@@ -11,9 +11,7 @@
 - [Команда проекта](#команда-проекта)
 
 ## Технологии
-- [GatsbyJS](https://www.gatsbyjs.com/)
-- [TypeScript](https://www.typescriptlang.org/)
-- ...
+- [Hugginface](https://huggingface.co/docs/transformers/v4.24.0/en/main_classes/pipelines#transformers.TextGenerationPipeline) 
 
 ## Использование
 Расскажите как установить и использовать ваш проект, покажите пример кода:
