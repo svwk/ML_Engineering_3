@@ -7,6 +7,7 @@ generator = pipeline("text-generation", "gpt2")
 
 
 class SourceTextLen(BaseModel):
+    """Input text"""
     text: str
     text_len: int
 
