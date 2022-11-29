@@ -20,15 +20,15 @@ async def root():
     return {"message": "Генерация текста"}
 
 
-@app.post("/generateLen/")
-def generateLen(source: SourceTextLen):
+@app.post("/generate_len/")
+def generate_len(source: SourceTextLen):
     """Генерация текста заданной длины"""
     result_text = generator(source.text, max_length=source.text_len)
     return {"generated_text": result_text[0]['generated_text']}
 
 
-@app.post("/generate100/")
-def generate100(source: SourceText):
+@app.post("/generate_100/")
+def generate_100(source: SourceText):
     """Генерация текста фиксированной длины"""
     result_text = generator(source.text, max_length=100)
     return {"generated_text": result_text[0]['generated_text']}
