@@ -32,6 +32,9 @@ def generate_len(source: SourceTextLen):
 
 @app.post("/generate_100/")
 def generate_100(source: SourceText):
-    """Генерация текста фиксированной длины"""
+    """Text generation using text user input and const value of symbols count
+    - **text**: input user text
+    - **100**: count of output symbols
+    """
     result_text = generator(source.text, max_length=100)
     return {"generated_text": result_text[0]['generated_text']}
