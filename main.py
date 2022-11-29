@@ -6,9 +6,13 @@ app = FastAPI()
 generator = pipeline("text-generation", "gpt2")
 
 
-class SourceText(BaseModel):
+class SourceTextLen(BaseModel):
     text: str
     len: int
+
+
+class SourceText(BaseModel):
+    text: str
 
 
 @app.get("/")
@@ -17,14 +21,14 @@ async def root():
 
 
 @app.post("/generateLen/")
-def predict(source: SourceText):
+def generateLen(source: SourceTextLen):
     """Генерация текста заданной длины"""
     result_text = generator(source.text, max_length=source.len)
     return {"generated_text": result_text[0]['generated_text']}
 
 
 @app.post("/generate100/")
-def predict(text: str):
+def generate100(source: SourceText):
     """Генерация текста фиксированной длины"""
-    result_text = generator(text, max_length=100)
+    result_text = generator(source.text, max_length=100)
     return {"generated_text": result_text[0]['generated_text']}
