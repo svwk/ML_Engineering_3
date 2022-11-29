@@ -8,7 +8,7 @@ generator = pipeline("text-generation", "gpt2")
 
 class SourceTextLen(BaseModel):
     text: str
-    textLen: int
+    text_len: int
 
 
 class SourceText(BaseModel):
@@ -23,7 +23,7 @@ async def root():
 @app.post("/generateLen/")
 def generateLen(source: SourceTextLen):
     """Генерация текста заданной длины"""
-    result_text = generator(source.text, max_length=source.textLen)
+    result_text = generator(source.text, max_length=source.text_len)
     return {"generated_text": result_text[0]['generated_text']}
 
 
