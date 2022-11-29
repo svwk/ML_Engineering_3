@@ -4,7 +4,6 @@
 ## Содержание
 - [Технологии](#технологии)
 - [Начало работы](#начало-работы)
-- [Команда проекта](#команда-проекта)
 
 ## Технологии
 - [Hugginface](https://huggingface.co/docs/transformers/v4.24.0/en/main_classes/pipelines#transformers.TextGenerationPipeline) 
@@ -27,8 +26,3 @@
 
 ### Зачем вы разработали этот проект?
 Чтобы был.
-
-## Команда проекта
-Оставьте пользователям контакты и инструкции, как связаться с командой разработки.
-
-- [Богдан Звягинцев](tg://resolve?domain=bzvyagintsev) — Front-End Engineer
