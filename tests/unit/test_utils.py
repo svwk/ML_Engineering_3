@@ -10,9 +10,19 @@ def test_generate_text_with_exception():
     generator_mock = Mock(side_effect=Exception)
     generator.generator = generator_mock
 
-    a = generator.generate_text("", 0)
+    a = generator.generate_text("", 1)
     assert "Message" in a.keys()
     assert a.get("Message").startswith('Parameters are not valid')
+
+
+def test_wrong_length():
+    generator = Utils()
+    generator_mock = Mock(side_effect=Exception)
+    generator.generator = generator_mock
+
+    a = generator.generate_text("", -1)
+    assert "Message" in a.keys()
+    assert a.get("Message").startswith('Length is not valid')
 
 
 @pytest.mark.parametrize(

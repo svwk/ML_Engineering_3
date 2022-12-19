@@ -12,6 +12,8 @@ class Utils:
         - **text**: input user text
         - **text_len**: count of output symbols
         """
+        if text_len <= 0:
+            return {"Message": "Length is not valid. Length should be more than 0."}
         try:
             result_text = self.generator(text, max_length=text_len)
         except Exception as e:
