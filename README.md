@@ -1,3 +1,5 @@
+[![Python application](https://github.com/svwk/ML_Engineering_3/actions/workflows/python-app.yml/badge.svg)](https://github.com/svwk/ML_Engineering_3/actions/workflows/python-app.yml)
+
 # Название проекта
 Практическое задание №3 по дисциплине Инженирия Машинного обучения.
 
