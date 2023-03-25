@@ -36,7 +36,9 @@ def test_generate_text_with_mock(text, text_len, expected):
     generator_mock = Mock(return_value=v)
     generator.generator = generator_mock
 
-    assert generator.generate_text(text, text_len) == {'generated_text': expected}
+    assert generator.generate_text(text, text_len) == {
+        'generated_text': expected
+    }
     generator_mock.assert_called_once_with(text, max_length=text_len)
 
 

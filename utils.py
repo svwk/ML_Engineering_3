@@ -13,11 +13,15 @@ class Utils:
         - **text_len**: count of output symbols
         """
         if text_len <= 0:
-            return {"Message": "Length is not valid. Length should be more than 0."}
+            message = "Length is not valid. "\
+                      "Length should be more than 0."
+            return {"Message": message}
         try:
             result_text = self.generator(text, max_length=text_len)
         except Exception as e:
-            return {"Message": f"Parameters are not valid. {e}. I don't know what to say"}
+            message = f"Parameters are not valid. {e}."\
+                    f"I don't know what to say"
+            return {"Message": message}
         return {"generated_text": result_text[0]['generated_text']}
 
     @staticmethod

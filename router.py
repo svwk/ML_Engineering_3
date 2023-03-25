@@ -6,6 +6,7 @@ from utils import Utils
 
 api_router = APIRouter()
 
+
 @api_router.get("/")
 async def root():
     return {"message": "Генерация текста"}
@@ -23,7 +24,8 @@ def generate_len(source: SourceTextLen):
 
 @api_router.post("/generate_100/")
 def generate_100(source: SourceText):
-    """Text generation using text user input and const (100) value of symbols count
+    """Text generation using text user input and const (100)
+    value of symbols count
     - **text**: input user text
     """
     generator = Utils()
